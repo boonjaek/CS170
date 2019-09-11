@@ -1,6 +1,12 @@
-
+// Problem 1 for Homework 1
 public class prob1 
 {
+	/*
+	Methods needed to be written 
+	1. Method to draw an n-polygon 
+	2. Method to draw
+	*/
+
 
 	// Draws an n-polygon of a certain size
 	public static void DrawPoly(Turtle t, int n, double size)
@@ -61,6 +67,7 @@ public class prob1
 
 		}
 	}	
+
 
 	public static void main(String[] args)
 	{
