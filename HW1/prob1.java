@@ -56,21 +56,11 @@ public class prob1
 		//For loop for the entire wall
 		for(int i = 0; i < 7; i++)
 		{
+			
+		
 
-			if(i%2 == 0)
-			{
-				t.forward(5);
-				t.right(90);
-				t.forward(5);
-				t.right(90);
-				t.right(5);
-				t.right(90);
-				t.forward(5);
-				for(int i = 0; i < 7; i++)
-			}
 		}
-
-	}
+	}	
 
 	public static void main(String[] args)
 	{
@@ -79,7 +69,9 @@ public class prob1
 		Column(t);
 		t.right(180);
 
-		t.foward(50);
+		t.forward(50);
+
+		Brick(t);
 	}
 
 
