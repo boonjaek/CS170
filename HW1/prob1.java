@@ -172,30 +172,43 @@ public class prob1
 
 	public static void Arch(Turtle t)
 	{
+		// Variables needed
+		// Radius, # of sides, Degree of turn, circumferance 
+		// Radius = a/cos(180/n) a = inradius, n = numSides
+
+		int n = 500;
+		double radius1 = 20.0/Math.cos(Math.PI/n);
+		double circum1 = 2*Math.PI*radius1;
+
+		
 		t.forward(30);
 
-		for(int i = 0; i < 30; i++)
+		for(int i = 0; i < n/2; i++)
 		{
-			t.forward((2*Math.PI*20)/60);
-			t.right(360.0/60);
+			t.forward(circum1/n);
+			t.right(360.0/n);
+
 		}
 
-		t.forward(35);
+		t.forward(30);
 		t.right(90);
 		t.forward(10);
 		t.right(90);
 		t.forward(30);
 
-		for(int i = 0; i < 30; i++)
+		double radius2 = 10.0/Math.cos(Math.PI/n);
+		double circum2 = 2*Math.PI*radius2;
+
+		for(int i = 0; i < n/2; i++)
 		{
-			t.forward((2*Math.PI*10)/60);
-			t.left(360.0/60);
+			t.forward(circum2/n);
+			t.left(360.0/n);
 		}
+
 		t.forward(30);
 		t.right(90);
 		t.forward(10);
 		t.right(180);
-
 	}
 
 	public static void Star(Turtle t)
@@ -242,7 +255,7 @@ public class prob1
 	{
 		Turtle t = new Turtle();
 		
-		//Drawing column 1
+		// Drawing column 1
 		t.left(90);
 
 		Column(t);
@@ -263,7 +276,13 @@ public class prob1
 		Arch(t);
 
 		Move(t,40);
-		t.left(90);
+
+		Brick(t);
+
+		Move(t,80);
+		t.right(90);
+		Move(t,35);
+		t.right(180);
 
 		Column(t);
 
@@ -285,13 +304,6 @@ public class prob1
 
 		}
 
-		t.left(180);
-		for(int i = 0; i < 3; i++)
-		{
-			Move(t,20);
-			t.right(90);
-			Move(t,60);
-		}
 	}
 
 
